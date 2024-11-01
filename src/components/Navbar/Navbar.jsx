@@ -40,25 +40,25 @@ const Navbar = () => {
         <Link to="/card/1">Yazılım Geliştirme</Link>
       </Menu.Item>
       <Menu.Item key="2">
-        <Link to="/services/web-design">Web Tasarımı</Link>
+        <Link to="/card/2">Web Tasarımı</Link>
       </Menu.Item>
       <Menu.Item key="3">
-        <Link to="/services/mobile-app-design">Mobil Uygulama Tasarımı</Link>
+        <Link to="/card/3">Mobil Uygulama Tasarımı</Link>
       </Menu.Item>
       <Menu.Item key="4">
-        <Link to="/services/data-analysis">Veri Analizi</Link>
+        <Link to="/card/4">Veri Analizi</Link>
       </Menu.Item>
       <Menu.Item key="5">
-        <Link to="/services/seo-consulting">SEO Danışmanlığı</Link>
+        <Link to="/card/5">SEO Danışmanlığı</Link>
       </Menu.Item>
       <Menu.Item key="6">
-        <Link to="/services/ecommerce-solutions">E-Ticaret Çözümleri</Link>
+        <Link to="/card/6">E-Ticaret Çözümleri</Link>
       </Menu.Item>
       <Menu.Item key="7">
-        <Link to="/services/mobile-game-development">Mobil Oyun Geliştirme</Link>
+        <Link to="/card/7">Mobil Oyun Geliştirme</Link>
       </Menu.Item>
       <Menu.Item key="8">
-        <Link to="/services/cloud-solutions">Bulut Bilişim Çözümleri</Link>
+        <Link to="/card/8">Bulut Bilişim Çözümleri</Link>
       </Menu.Item>
     </Menu>
   );
