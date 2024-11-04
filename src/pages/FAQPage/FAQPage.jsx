@@ -4,10 +4,10 @@ import faqData from "../../data/faqData"; // SSS verilerini import et
 const FAQPage = () => {
   return (
     <div className="p-5 ">
-      <h1 className="text-3xl font-bold mb-5 text-center">
+      <h1 className="text-4xl font-bold mb-6 text-center">
         Sıkça Sorulan Sorular
       </h1>
-      <p className="text-center mb-5">
+      <p className="text-center mb-5 font-normal text-lg">
         YB digital olarak sizlere hızla gelişen bu süreçte, sistemleri daha
         etkin ve verimli kullanabilmeniz için web tasarım, yazılım geliştirme,
         mobil uygulama geliştirme, dijital pazarlama çözümleri ve sosyal medya

@@ -9,6 +9,7 @@ import { Provider } from 'react-redux'; // Redux Provider'ı import edin
 import store from './redux/store'; // Store'unuzu import edin
 import { Routes, Route } from "react-router-dom"; 
 import FAQPage from "./pages/FAQPage/FAQPage";
+import Offer from "./pages/Offer/Offer";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/about" element={<About />} /> 
           <Route path="/contact" element={<ContactForm />} /> 
           <Route path="/employment" element={<Employment />} /> 
+          <Route path="/offer" element={<Offer />} /> 
           <Route path="/card/:id" element={<CardDetail />} /> {/* Kart detay sayfası için rota */}
           <Route path="/faq" element={<FAQPage />} /> {/* SSS sayfasına yönlendirme */}
 

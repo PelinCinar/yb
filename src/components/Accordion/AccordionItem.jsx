@@ -1,21 +1,14 @@
-// src/components/Accordion/AccordionItem.jsx
-import React, { useState } from 'react';
+import React from 'react';
 
-const AccordionItem = ({ question, answer }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleAccordion = () => {
-    setIsOpen(!isOpen);
-  };
-
+const AccordionItem = ({ question, answer, isOpen, onToggle }) => {
   return (
     <div className="border-b border-gray-300">
       <div
         className="flex justify-between items-center cursor-pointer p-4"
-        onClick={toggleAccordion}
+        onClick={onToggle} // Tıklama olayını çağır
       >
-        <h2 className="font-semibold">{question}</h2>
-        <span>{isOpen ? '-' : '+'}</span>
+        <h2 className="font-semibold text-lg">{question}</h2> {/* Soru metni büyütüldü */}
+        <span className={`transition-transform ${isOpen ? 'rotate-180' : ''}`}>&#9654;</span> {/* Ok işareti */}
       </div>
       {isOpen && (
         <div className="p-4 text-gray-700">
