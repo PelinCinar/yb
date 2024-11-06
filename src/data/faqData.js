@@ -1,7 +1,7 @@
 // src/data/faqData.js
 const faqData = [
     {
-        question: "Soru 1: Siz kimsiniz?",
+        question: "Soru 1: Biz kimiz?",
         answer: "Biz, yenilikçi yazılım çözümleri sunan bir teknoloji şirketiyiz. Müşterilerimizin ihtiyaçlarını karşılamak için özel yazılımlar geliştiriyoruz."
     },
     {

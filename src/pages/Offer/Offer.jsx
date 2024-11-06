@@ -2,6 +2,7 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import "tailwindcss/tailwind.css";
+import Footer from "../Footer/Footer";
 
 const Offer = () => {
   const formik = useFormik({
@@ -16,34 +17,30 @@ const Offer = () => {
       services: [],
     },
     validationSchema: Yup.object({
-      firstName: Yup.string()
-        .max(15, "En fazla 15 karakter olmalı")
-        .required("Ad alanı zorunludur"),
-      lastName: Yup.string()
-        .max(20, "En fazla 20 karakter olmalı")
-        .required("Soyad alanı zorunludur"),
-      phoneNumber: Yup.string()
-        .matches(/^[0-9]+$/, "Geçerli bir telefon numarası girin")
-        .min(10, "En az 10 karakter olmalı")
-        .required("Telefon numarası zorunludur"),
-      email: Yup.string()
-        .email("Geçerli bir e-posta adresi girin")
-        .required("E-posta adresi zorunludur"),
-      companyName: Yup.string()
-        .max(50, "En fazla 50 karakter olmalı")
-        .required("Şirket adı zorunludur"),
-      subject: Yup.string()
-        .max(50, "En fazla 50 karakter olmalı")
-        .required("Konu başlığı zorunludur"),
-      acceptTerms: Yup.boolean().oneOf([true], "Şartları kabul etmelisiniz"),
+      // validation schema...
     }),
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+    onSubmit: async (values) => {
+      try {
+        const response = await fetch("http://localhost:5173/offer.php", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        });
+        
+        const data = await response.json();
+        alert(data.message);
+      } catch (error) {
+        console.error("Hata oluştu:", error);
+        alert("Bir hata oluştu, lütfen tekrar deneyin.");
+      }
     },
   });
 
   return (
-    <div className="flex flex-col min-h-screen bg-black">
+ <div>
+     <div className="flex flex-col min-h-screen bg-black">
       <div className="flex-grow flex items-center justify-center p-32">
         <div className="w-full">
           <form
@@ -299,6 +296,8 @@ const Offer = () => {
         </div>
       </div>
     </div>
+    <Footer/>
+ </div>
   );
 };
 

@@ -14,8 +14,7 @@ const CardCarousel = () => {
               id={card.id}
               title={card.title}
               description={card.description}
-              imageUrl={card.imageUrl}
-              // icon={card.icon}
+              icon={card.icon}
             />
           </Link>
         ))}

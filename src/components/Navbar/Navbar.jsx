@@ -4,7 +4,8 @@ import { Dropdown, Menu } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme } from "../../redux/slices/themeSlice";
 import { BsSun, BsMoon } from "react-icons/bs";
-import { MdKeyboardArrowDown } from "react-icons/md"; // Aşağı yönlü ok simgesi
+import { MdKeyboardArrowDown } from "react-icons/md";
+import { FaRegHandshake } from "react-icons/fa";
 import Logo from "../../assets/Logo/logo.png";
 
 const Navbar = () => {
@@ -14,11 +15,7 @@ const Navbar = () => {
   const isDarkMode = useSelector((state) => state.theme.isDarkMode);
 
   const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
+    setIsScrolled(window.scrollY > 50);
   };
 
   useEffect(() => {
@@ -34,32 +31,32 @@ const Navbar = () => {
 
   const menu = (
     <Menu
-      style={{ borderRadius: "8px", padding: "10px 0", minWidth: "200px" }} // Menü stili
+      style={{
+        borderRadius: "1px",
+        padding: "10px 0",
+        minWidth: "230px",
+        backgroundColor: "black", // Pembe arka plan
+      }}
     >
-      <Menu.Item key="1">
-        <Link to="/card/1">Yazılım Geliştirme</Link>
-      </Menu.Item>
-      <Menu.Item key="2">
-        <Link to="/card/2">Web Tasarımı</Link>
-      </Menu.Item>
-      <Menu.Item key="3">
-        <Link to="/card/3">Mobil Uygulama Tasarımı</Link>
-      </Menu.Item>
-      <Menu.Item key="4">
-        <Link to="/card/4">Veri Analizi</Link>
-      </Menu.Item>
-      <Menu.Item key="5">
-        <Link to="/card/5">SEO Danışmanlığı</Link>
-      </Menu.Item>
-      <Menu.Item key="6">
-        <Link to="/card/6">E-Ticaret Çözümleri</Link>
-      </Menu.Item>
-      <Menu.Item key="7">
-        <Link to="/card/7">Mobil Oyun Geliştirme</Link>
-      </Menu.Item>
-      <Menu.Item key="8">
-        <Link to="/card/8">Bulut Bilişim Çözümleri</Link>
-      </Menu.Item>
+      {[
+        "Yazılım Geliştirme",
+        "Web Tasarımı",
+        "Mobil Uygulama Tasarımı",
+        "Veri Analizi",
+        "SEO Danışmanlığı",
+        "E-Ticaret Çözümleri",
+        "Mobil Oyun Geliştirme",
+        "Bulut Bilişim Çözümleri",
+      ].map((service, index) => (
+        <Menu.Item
+          key={index}
+          style={{ margin: "0", color: "white", font: "bold" }}
+        >
+          <Link to={`/card/${index + 1}`} className="text-white">
+            {service}
+          </Link>
+        </Menu.Item>
+      ))}
     </Menu>
   );
 
@@ -73,7 +70,9 @@ const Navbar = () => {
             to="/"
             className="text-white text-2xl font-bold flex items-center"
           >
-            <img src={Logo} alt="Logo" className="w-12 h-auto ml-11" />
+            <div className="bg-white rounded-full w-16 h-16 flex items-center justify-center ml-20">
+              <img src={Logo} alt="Logo" className="w-14 h-auto " />
+            </div>
           </Link>
 
           <div className="hidden md:flex flex-1 justify-center gap-8">
@@ -94,37 +93,33 @@ const Navbar = () => {
                 Hizmetlerimiz <MdKeyboardArrowDown className="ml-1" />
               </Link>
             </Dropdown>
-            <Link
-              to="/offer"
-              className="text-white text-lg hover:text-gray-300"
-            >
-              Teklif Al
+            <Link to="/" className="text-white text-lg hover:text-gray-300">
+              Blog
             </Link>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex gap-4 ml-auto">
+            <Link
+              to="/offer"
+              className=" border text-white text-end px-2 py-2 rounded-full flex items-center transition duration-200 transform hover:scale-105"
+            >
+              <FaRegHandshake className="mr-2" />
+              Teklif Al
+            </Link>
             <Link
               to="/contact"
-              className="border border-[#5c62f7] bg-[#5c62f7] text-white text-sm rounded-full px-3 py-1"
+              className="border  text-white text-md px-5 py-2 ml-4 rounded-full"
             >
               İletişim
             </Link>
-
-            <button
-              className="md:hidden text-white"
-              onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-            >
-              {isSidebarOpen ? "✖" : "☰"}
-            </button>
-
-            <button
-              onClick={() => dispatch(toggleTheme())}
-              className="text-white"
-              aria-label="Toggle theme"
-            >
-              {isDarkMode ? <BsSun size={24} /> : <BsMoon size={24} />}
-            </button>
           </div>
+
+          <button
+            className="md:hidden text-white"
+            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+          >
+            {isSidebarOpen ? "✖" : "☰"}
+          </button>
         </div>
       </nav>
 
