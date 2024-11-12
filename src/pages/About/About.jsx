@@ -2,13 +2,15 @@ import React from "react";
 import { Card } from "antd";
 import { FaUserFriends, FaRegClock, FaRegBuilding } from "react-icons/fa";
 import Team from "./Team";
+import Footer from "../Footer/Footer";
 
 const About = () => {
   return (
     <>
-      <section className="bg-black py-48 ">
-        <div className="container mx-auto px-5 mt-4"> {/* Increased top margin here */}
-          <h2 className="text-4xl font-bold text-white text-center mb-11">Biz Kimiz?</h2>
+      <section className="bg-black py-28 ">
+
+        <div className="container mx-auto px-10 mt-1"> Increased top margin here
+          <h2 className="text-4xl font-bold text-[#5c62f7] text-center mb-4">Biz Kimiz?</h2>
           <p className="text-center text-lg text-gray-300 mb-12">
             Müşteri memnuniyetini ön planda tutarak kaliteli hizmet sunan bir ekibiz. 
             Misyonumuz, en iyi hizmeti sağlamak ve her zaman sizin için burada olmaktır.
@@ -72,6 +74,7 @@ const About = () => {
         </div>
       </section>
       <Team />
+      <Footer/>
     </>
   );
 };

@@ -1,27 +1,23 @@
 <?php
 header("Content-Type: application/json");
 
+// Veritabanı bağlantısını dahil et
+include 'database.php';  // database.php dosyasını dahil ettik
+
 // Gelen veriyi al
 $data = json_decode(file_get_contents("php://input"), true);
 
-// Veritabanına bağlantıyı aç
-$conn = new mysqli("localhost", "kullanici_adi", "sifre", "veritabani_adi");
+// Prepared statement ile form verilerini veritabanına ekle
+$stmt = $conn->prepare("INSERT INTO offers (firstName, lastName, phoneNumber, email, companyName, subject) VALUES (?, ?, ?, ?, ?, ?)");
+$stmt->bind_param("ssssss", $data['firstName'], $data['lastName'], $data['phoneNumber'], $data['email'], $data['companyName'], $data['subject']);
 
-// Bağlantı kontrolü
-if ($conn->connect_error) {
-    die(json_encode(["message" => "Veritabanı bağlantısı başarısız!"]));
-}
-
-// Form verilerini veritabanına ekle
-$sql = "INSERT INTO offers (firstName, lastName, phoneNumber, email, companyName, subject)
-VALUES ('" . $data['firstName'] . "', '" . $data['lastName'] . "', '" . $data['phoneNumber'] . "', '" . $data['email'] . "', '" . $data['companyName'] . "', '" . $data['subject'] . "')";
-
-if ($conn->query($sql) === TRUE) {
+if ($stmt->execute()) {
     echo json_encode(["message" => "Kayıt başarıyla eklendi!"]);
 } else {
-    echo json_encode(["message" => "Hata: " . $conn->error]);
+    echo json_encode(["message" => "Hata: " . $stmt->error]);
 }
 
 // Bağlantıyı kapat
+$stmt->close();
 $conn->close();
 ?>

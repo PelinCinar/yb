@@ -1,7 +1,7 @@
 import backgroundImage from '../../assets/Home/home.jpg'; // Arka plan resmi
 import CardCarousel from '../../components/Card/CardCarousel'; // Kart karuseli bileşeni
+import About from '../About/About';
 import FAQPage from '../FAQPage/FAQPage';
-import Footer from '../Footer/Footer'; // Alt bilgi bileşeni
 
 const Home = () => {
   return (
@@ -25,8 +25,9 @@ const Home = () => {
       <div> 
       <CardCarousel />
       <FAQPage/>
+      <About />
       </div>
-      <Footer />
+
     </div>
   );
 };
