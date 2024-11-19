@@ -71,7 +71,7 @@ const EducationDetail = () => {
 
             {/* Detaylar */}
             <div className="text-white text-2xl ">
-              <h2 className="text-pretty mt-20">Detaylar:</h2>
+              <h2 className="text-pretty mt-3 bg-black rounded-md px-2 py-1">Detaylar:</h2>
               <p>{education.detail}</p>
             </div>
           </div>

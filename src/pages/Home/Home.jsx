@@ -13,10 +13,10 @@ const Home = () => {
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="text-center px-4 md:px-6">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              YB Ekibi Sizler İçin Çalışıyor
+            Yazılım ve Dijital Çözümlerle Sınırları Aşın!
             </h1>
             <p className="text-lg md:text-xl text-gray-200">
-              Sizi en iyi şekilde desteklemek için buradayız. Hizmetlerimizle ilgili daha fazla bilgi edinmek için menüyü kullanabilirsiniz.
+            YB Digital, startup projelerden dijital dönüşüme kadar her adımda yanınızda.
             </p>
           </div>
         </div>

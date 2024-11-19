@@ -47,8 +47,8 @@ function ContactForm({ onSubmit }) {
   });
 
   return (
-    <div>
-      <div className="min-h-screen flex items-center justify-center bg-[#000000]">
+   <div>
+      <div className=" contact-form  min-h-screen flex items-center justify-center bg-[#000000]">
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10 p-4 lg:p-8 max-w-5xl mt-14">
           <div className="bg-[#464aba] p-6 lg:p-12 rounded-lg shadow-lg flex-1">
             <h1 className="text-white text-2xl lg:text-3xl font-bold text-center mb-2">
@@ -164,7 +164,7 @@ function ContactForm({ onSubmit }) {
               </button>
             </form>
           </div>
-          <div className="image-container flex justify-center items-center lg:justify-start">
+          <div className="image-container flex justify-center items-center lg:justify-start hidden lg:block">
             <div className="border-4 border-white rounded-lg shadow-lg overflow-hidden w-[400px] h-[601px]">
               <img
                 src={img}
@@ -177,6 +177,7 @@ function ContactForm({ onSubmit }) {
       </div>
       <Footer />
     </div>
+
   );
 }
 

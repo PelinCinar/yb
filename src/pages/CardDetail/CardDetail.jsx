@@ -11,6 +11,17 @@ const CardDetail = () => {
     return <h2 className="text-center">Kart bulunamadı!</h2>;
   }
 
+  // Detayları render etmek için fonksiyon
+  const renderDetails = (detail) => {
+    const detailLines = detail.split("\n");
+    return detailLines.map((line, index) => (
+      <div key={index} className="flex items-center text-white mt-3 text-xl">
+        <span className="mr-3 text-[#5c62f7]">→</span> {/* Ok işareti */}
+        <p>{line}</p>
+      </div>
+    ));
+  };
+
   return (
     <div>
       <div className="flex min-h-screen bg-[#5c62f7]">
@@ -22,21 +33,28 @@ const CardDetail = () => {
         </div>
 
         {/* Right side: Icon, Description, and Details */}
-        <div className="w-1/2 bg-black p-6 flex flex-col justify-center items-center">
+        <div className="w-1/2 bg-black p-6 flex flex-col justify-center items-center ">
           {/* Display the icon */}
-          <div className="text-[#5c62f7] text-6xl mb-4">
-            <card.icon />
-          </div>
+        
 
           {/* Description */}
-          <p className="text-center text-white mb-18 font-mono text-2xl">
+          <p className="text-center text-white mt-3 font-mono text-2xl">
             {card.description}
           </p>
 
-          {/* Details */}
-          <div className="text-white mt-16 text-2xl mt">
-            <h2 className="text-pretty mt-3 ">Detaylar:</h2>
-            <p>{card.detail}</p>
+          {/* Tag Section: Add tags under the description */}
+          <div className="flex flex-wrap mt-8 mb-10 justify-center">
+            {card.tags.map((tag, index) => (
+              <div key={index} className="m-2 p-4 bg-[#5c62f7] text-white rounded-lg shadow-md  mp-4 ">
+                {tag}
+              </div>
+            ))}
+          </div>
+
+          {/* Details Section */}
+          <div className="text-white  text-2xl ">
+            <h2 className="text-pretty mt-3 bg-[#5c62f7] rounded-md px-2 py-1">Nasıl Çalışıyoruz?</h2>
+            {renderDetails(card.detail)}
           </div>
         </div>
       </div>

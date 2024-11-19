@@ -13,6 +13,9 @@ import Contact from "./pages/Contact/Contact";
 import ContactView from "./components/Contact/ContactView";
 import OfferView from "./components/OfferContainer/OfferView";
 import Offer from "./pages/Offer/Offer";
+import BlogList from "./components/Blog/BlogList";
+import BlogDetail from "./components/Blog/BlogDetail";
+
 
 
 const App = () => {
@@ -26,6 +29,11 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact/>} />
+          <Route path="/blog" element={<BlogList/>} />
+          <Route path="/blog/:id" element={<BlogDetail/>} />
+
+
+
           <Route path="/contact/view" element={<ContactView/>} />
           < Route path="/offer" element={<Offer/>}/>
           <Route path="/offer/view" element={<OfferView/>} />

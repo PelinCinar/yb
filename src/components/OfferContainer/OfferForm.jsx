@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
+// OfferForm Bileşeni
 const OfferForm = ({ values, handleChange, handleBlur }) => {
   const navigate = useNavigate();
 
@@ -25,11 +26,12 @@ const OfferForm = ({ values, handleChange, handleBlur }) => {
 
   return (
     <div className="flex flex-col min-h-screen bg-black">
-      <div className="flex-grow flex items-center justify-center p-32">
+      {/* Formu saran container div'si. */}
+      <div className="flex-grow flex items-center justify-center p-4 md:p-32 form-container">
         <div className="w-full">
           <form className="bg-white p-8 rounded-lg shadow-lg w-full" onSubmit={handleSave}>
             <h2 className="text-2xl font-bold mb-4">Teklif Formu</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700" htmlFor="firstName">
                   Ad
@@ -124,16 +126,8 @@ const OfferForm = ({ values, handleChange, handleBlur }) => {
             </div>
 
             <h3 className="text-lg font-bold mt-4">Hizmetler</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-1 mt-2">
-              {[
-                "Sosyal Medya Yönetimi",
-                "Dijital Pazarlama",
-                "Grafik & Video Tasarım",
-                "Mobil Yazılım",
-                "Web Tasarım",
-                "Web Yazılım",
-                "Veri Analizi",
-              ].map((service, index) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-1 mt-2">
+              {[ "Sosyal Medya Yönetimi", "Dijital Pazarlama", "Grafik & Video Tasarım", "Mobil Yazılım", "Web Tasarım", "Web Yazılım", "Veri Analizi", ].map((service, index) => (
                 <label key={index} className="inline-flex items-center">
                   <input
                     type="checkbox"

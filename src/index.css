@@ -1,3 +1,53 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Mobilde formu biraz aşağıya alalım */
+
+div.form-container {
+  margin-top: 1px; /* Navbar'ın yüksekliğine göre */
+}
+.contact-form {
+  margin-top: 10opx
+}
+@media (max-width: 768px) {
+    .form-container {
+      margin-top: 100px; 
+      
+    }
+
+    
+  }
+
+  
+  
+  /* @media (max-width: 768px) {
+    .form-container {
+      margin-top: 100px; 
+    }
+    
+  } */
+
+  @media (max-width: 480px) {
+    .contact-form {
+      margin-top: 1px;
+
+    }
+  }
+
+
+@media (max-width: 768px) {
+  .logo-container {
+    margin-left: 0 !important; /* Sol kenara sıfırlama */
+    justify-content: flex-start; /* Sola hizalama */
+  }
+}
+
+
+
+.pointer-hover {
+  cursor: pointer;
+}
+.navbar {
+  z-index: 50;
+}
