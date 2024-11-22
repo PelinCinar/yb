@@ -1,4 +1,7 @@
-import React from 'react';
+import React from "react";
+import { Card } from "antd";
+import { FaUserFriends } from "react-icons/fa";
+import { FaRocket, FaHandshake } from "react-icons/fa";
 
 const Vision = () => {
   return (
@@ -6,7 +9,7 @@ const Vision = () => {
       <div className="container mx-auto px-10 py-16">
         {/* Başlık */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-black mb-4 ">Vizyon, Misyon ve Değerlerimiz</h2>
+          <h2 className="text-3xl font-bold text-black mb-4">Vizyon, Misyon ve Değerlerimiz</h2>
           <p className="text-lg text-black">
             Şirketimizin temel değerlerini ve hedeflerini keşfedin. Dijital dünyada fark yaratmayı ve birlikte büyümeyi
             amaçlıyoruz.
@@ -14,34 +17,43 @@ const Vision = () => {
         </div>
 
         {/* Vizyon, Misyon, Değerler */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
           {/* Vizyonumuz */}
-          <div className="bg-[#5c62f7] p-8 shadow-lg rounded-lg transition-all duration-300 hover:shadow-2xl relative z-0">
-            <h3 className="text-2xl font-semibold text-white mb-4">Vizyonumuz</h3>
-            <p className="text-lg text-white">
+          <Card className="shadow-lg rounded-lg bg-gradient-to-r from-purple-700 to-blue-600 text-white p-6 hover:shadow-2xl">
+            <div className="flex items-center mb-4">
+              <FaRocket className="text-4xl text-white mr-3" />
+              <h3 className="text-xl font-semibold">Vizyonumuz</h3>
+            </div>
+            <p>
               Dijital dünyada fark yaratan projelerle markaların iş süreçlerini güçlendirmek ve insanların hayatlarını
               kolaylaştıran teknolojiler üretmek.
             </p>
-          </div>
+          </Card>
 
           {/* Misyonumuz */}
-          <div className="bg-[#5c62f7] p-8 shadow-lg rounded-lg transition-all duration-300 hover:shadow-2xl relative z-0">
-            <h3 className="text-2xl font-semibold text-white mb-4">Misyonumuz</h3>
-            <p className="text-lg text-white">
-              Her ölçekte işletmeye ve bireye teknolojinin gücünü sunarak, hayal edilen projeleri gerçeğe dönüştürmek.
-              Çalışanlarımızın deneyim kazanmalarını desteklerken, müşterilerimize en iyi hizmeti sağlamak.
+          <Card className="shadow-lg rounded-lg bg-gradient-to-r from-blue-500 to-green-400 text-white p-6 hover:shadow-2xl">
+            <div className="flex items-center mb-4">
+              <FaUserFriends className="text-4xl text-white mr-3" />
+              <h3 className="text-xl font-semibold">Misyonumuz</h3>
+            </div>
+            <p>
+              Projelerinizi zamanında teslim ederken kalite standartlarımızdan asla ödün vermiyoruz. Güven ve hızla
+              büyüyoruz.
             </p>
-          </div>
+          </Card>
 
           {/* Değerlerimiz */}
-          <div className="bg-[#5c62f7] p-8 shadow-lg rounded-lg transition-all duration-300 hover:shadow-2xl relative z-0">
-            <h3 className="text-2xl font-semibold text-white mb-4">Değerlerimiz</h3>
-            <ul className="text-lg text-white space-y-4">
+          <Card className="shadow-lg rounded-lg bg-gradient-to-r from-green-500 to-yellow-500 text-white p-6 hover:shadow-2xl">
+            <div className="flex items-center mb-4">
+              <FaHandshake className="text-4xl text-white mr-3" />
+              <h3 className="text-xl font-semibold">Değerlerimiz</h3>
+            </div>
+            <ul className="space-y-2">
               <li>• <strong>Şeffaflık:</strong> Tüm süreçlerimizde açık iletişim ve dürüstlük önceliğimizdir.</li>
               <li>• <strong>İş Birliği:</strong> Müşterilerimizle güçlü bir bağ kurarak birlikte büyümeyi hedefliyoruz.</li>
               <li>• <strong>Sürekli Gelişim:</strong> Hem kendimizi hem de projelerimizi sürekli yeniliklerle ileri taşırız.</li>
             </ul>
-          </div>
+          </Card>
         </div>
       </div>
     </div>

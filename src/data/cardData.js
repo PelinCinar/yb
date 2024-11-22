@@ -28,7 +28,7 @@ Blog/Haber Siteleri: İçeriklerinizi öne çıkaran yaratıcı tasarımlar.`,
     imageUrl:
       "https://i.pinimg.com/236x/16/aa/f0/16aaf08c6bea384f971bdd1eaec1109a.jpg",
     link: "web-tasarimi",
-    icon: FaPaintBrush, // Add icon reference here
+    icon:FaMobileAlt , // Add icon reference here
     detail: `Analiz: Kullanıcı ihtiyaçlarını ve iş hedeflerinizi analiz ediyoruz.
 Prototip: Estetik ve kullanıcı dostu arayüzler tasarlıyoruz.
 Geliştirme: iOS, Android ve çapraz platformlar için optimize çözümler sunuyoruz.
@@ -49,7 +49,7 @@ Sürekli Destek: Güncellemeler ve bakım hizmetleri sunuyoruz.`,
     imageUrl:
       "https://i.pinimg.com/236x/4f/fc/67/4ffc67e165ec43882f5ff005ec261aeb.jpg",
     link: "mobil-uygulama",
-    icon: FaMobileAlt,
+    icon: FaChartLine,
     detail: `Veri Toplama: Analiz için uygun hale getiriyoruz.
 Analiz ve Görselleştirme: Modern araçlarla anlamlı veriler sunuyoruz.
 Strateji Geliştirme: Verilerinizi stratejik hedeflere dönüştürüyoruz.
@@ -71,7 +71,7 @@ Takip ve Destek: Düzenli raporlarla sürecinizi güçlendiriyoruz.`,
     imageUrl:
       "https://i.pinimg.com/236x/44/99/cc/4499ccbb9b1044dc83d45f5e022bd4af.jpg",
     link: "veri-analizi",
-    icon: FaChartLine,
+    icon: FaPaintBrush,
     detail: `Analiz: Hedeflerinizi ve kitlenizi belirliyoruz.
 Prototip Geliştirme: Görselleştirme için wireframe’ler hazırlıyoruz.
 Deneyim Tasarımı: Akıcı kullanıcı akışları oluşturuyoruz.

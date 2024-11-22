@@ -3,6 +3,8 @@ import img1 from "../assets/bir.jpg"
 import img2 from "../assets/iki.jpg"
 import img3 from "../assets/uc.jpg"
 import img4 from "../assets/dört.jpg"
+import img5 from "../assets/foto.png"
+
 
 
 
@@ -12,8 +14,8 @@ const teamData = [
       name: "Burak Gökce ",
       position: "Kurucu ve CEO",
       area: "YB Digital’in genel stratejisini ve vizyonunu belirler. Şirketin büyüme hedeflerine ulaşması için liderlik yapar, projeleri yönetir ve ekip koordinasyonunu sağlar.  ",
-      photo: "https://i.pinimg.com/236x/bb/39/a5/bb39a54a1eeed4b63a5bb7c503895107.jpg", // Profil fotoğrafı için örnek URL
-      linkedin: "https://www.linkedin.com/in/aliyilmaz",
+      photo: img5, // Profil fotoğrafı için örnek URL
+   
     },
     {
       id: 2,

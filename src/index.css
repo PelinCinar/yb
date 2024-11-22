@@ -5,45 +5,62 @@
 /* Mobilde formu biraz aşağıya alalım */
 
 div.form-container {
-  margin-top: 1px; /* Navbar'ın yüksekliğine göre */
+  margin-top: 10px; /* Navbar'ın yüksekliğine göre */
 }
-.contact-form {
-  margin-top: 10opx
+
+
+@media (max-width: 200px) {
+  .btn1-class {
+    gap: 0.5rem;
+  }
+  .btn-offer, .btn-contact {
+    font-size: 0.75rem; 
+    padding: 0.4rem 0.6rem; 
+    background-color: aqua;
+  }
 }
-@media (max-width: 768px) {
-    .form-container {
-      margin-top: 100px; 
-      
-    }
-
-    
-  }
-
-  
-  
-  /* @media (max-width: 768px) {
-    .form-container {
-      margin-top: 100px; 
-    }
-    
-  } */
-
-  @media (max-width: 480px) {
-    .contact-form {
-      margin-top: 1px;
-
-    }
-  }
 
 
 @media (max-width: 768px) {
+  .form-container {
+    margin-top: 100px;
+  }
+  div.form-container {
+    margin-top: 100px;
+  }
+
+  .contact-form {
+    margin-top: 100px;
+  }
+  .btn1-class {
+    display: flex;
+    gap: 1rem;
+    margin-left: auto;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .team-form {
+    grid-template-columns: 3;
+  }
+ 
+}
+
+@media (max-width: 480px) {
+  .contact-form {
+    margin-top: 100px;
+  }
+  
+}
+
+@media (max-width: 780px) {
   .logo-container {
-    margin-left: 0 !important; /* Sol kenara sıfırlama */
-    justify-content: flex-start; /* Sola hizalama */
+    margin-left: 1px !important;
+    justify-content: flex-start;
   }
+
 }
-
-
 
 .pointer-hover {
   cursor: pointer;
@@ -51,3 +68,5 @@ div.form-container {
 .navbar {
   z-index: 50;
 }
+
+

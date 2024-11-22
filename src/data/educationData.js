@@ -3,6 +3,8 @@ import { FaBrain, FaLaptopCode, FaUserGraduate, FaCode } from "react-icons/fa";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa"; // Import icons for social links
 import foto from "../assets/uc.jpg";
 import foto1 from "../assets/bir.jpg";
+import deneme from "../assets/deneme.jpg";
+
 
 
 const educationData = [
@@ -13,12 +15,9 @@ const educationData = [
     description: "Yapay zeka alanında kapsamlı bir eğitim ile AI dünyasına adım atın.",
     detail: "Bu eğitimde makine öğrenimi, derin öğrenme ve veri bilimi konularını ele alıyoruz. Katılımcılar, projeler üzerinden uygulamalı öğrenim ile AI modelleri geliştirebilecek yetkinliklere sahip olacaklar.",
     instructor: {
-      name: "Fatma",
-      surname: "hanım",
-      image: foto, // Eğitmen resmi için yol
-      linkedin: "https://www.linkedin.com/in/ahmet-yilmaz",
-      github: "https://github.com/ahmet-yilmaz",
-      email: "ahmet.yilmaz@example.com",
+     
+      image: deneme, // Eğitmen resmi için yol
+     
     },
   },
   {

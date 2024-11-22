@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
 
 // OfferForm Bileşeni
 const OfferForm = ({ values, handleChange, handleBlur }) => {
@@ -25,9 +26,9 @@ const OfferForm = ({ values, handleChange, handleBlur }) => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-black">
-      {/* Formu saran container div'si. */}
-      <div className="flex-grow flex items-center justify-center p-4 md:p-32 form-container">
+    <div className="flex flex-col min-h-screen bg-black ">
+     <div className="flex-grow flex items-center justify-center p-4 md:p-32 form-container mt-20 ">
+
         <div className="w-full">
           <form className="bg-white p-8 rounded-lg shadow-lg w-full" onSubmit={handleSave}>
             <h2 className="text-2xl font-bold mb-4">Teklif Formu</h2>
@@ -172,6 +173,21 @@ const OfferForm = ({ values, handleChange, handleBlur }) => {
       </div>
     </div>
   );
+};
+
+OfferForm.propTypes = {
+  values: PropTypes.shape({
+    firstName: PropTypes.string.isRequired,
+    lastName: PropTypes.string.isRequired,
+    phoneNumber: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    companyName: PropTypes.string.isRequired,
+    subject: PropTypes.string.isRequired,
+    services: PropTypes.arrayOf(PropTypes.string).isRequired,
+    acceptTerms: PropTypes.bool.isRequired,
+  }).isRequired,
+  handleChange: PropTypes.func.isRequired,
+  handleBlur: PropTypes.func.isRequired,
 };
 
 export default OfferForm;

@@ -48,8 +48,8 @@ function ContactForm({ onSubmit }) {
 
   return (
    <div>
-      <div className=" contact-form  min-h-screen flex items-center justify-center bg-[#000000]">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10 p-4 lg:p-8 max-w-5xl mt-14">
+      <div className="  min-h-screen flex items-center justify-center bg-[#000000]">
+        <div className=" contact-form flex flex-col lg:flex-row items-center lg:items-start gap-10 p-4 lg:p-8 max-w-5xl mt-14">
           <div className="bg-[#464aba] p-6 lg:p-12 rounded-lg shadow-lg flex-1">
             <h1 className="text-white text-2xl lg:text-3xl font-bold text-center mb-2">
               YB DIGITAL

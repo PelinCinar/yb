@@ -24,38 +24,44 @@ const CardDetail = () => {
 
   return (
     <div>
-      <div className="flex min-h-screen bg-[#5c62f7]">
-        {/* Left side: Title */}
-        <div className="w-1/2 flex justify-center items-center p-10">
-          <h1 className="text-7xl font-bold text-white text-center">
+      <div className="flex flex-col lg:flex-row min-h-screen bg-[#5c62f7] lg:w-full  lg:mt-0">
+        {/* Sol Kısım: Başlık */}
+        <div className="w-full lg:w-1/2 flex justify-center items-center p-24 mt-4 mb-4">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white text-center">
             {card.title}
           </h1>
         </div>
 
-        {/* Right side: Icon, Description, and Details */}
-        <div className="w-1/2 bg-black p-6 flex flex-col justify-center items-center ">
-          {/* Display the icon */}
-        
-
-          {/* Description */}
-          <p className="text-center text-white mt-3 font-mono text-2xl">
+        {/* Sağ Kısım: İkon, Açıklama, ve Detaylar */}
+        <div className="w-full lg:w-full  bg-black flex flex-col justify-center items-center lg:mt-0">
+        {/* Açıklama */}
+          <p className="text-center text-white mt-28 font-mono text-xl sm:text-2xl">
             {card.description}
           </p>
 
-          {/* Tag Section: Add tags under the description */}
+          {/* Etiketler Bölümü */}
           <div className="flex flex-wrap mt-8 mb-10 justify-center">
             {card.tags.map((tag, index) => (
-              <div key={index} className="m-2 p-4 bg-[#5c62f7] text-white rounded-lg shadow-md  mp-4 ">
+              <div
+                key={index}
+                className="m-2 p-4 bg-[#5c62f7] text-white rounded-lg shadow-md"
+              >
                 {tag}
               </div>
             ))}
           </div>
 
-          {/* Details Section */}
-          <div className="text-white  text-2xl ">
-            <h2 className="text-pretty mt-3 bg-[#5c62f7] rounded-md px-2 py-1">Nasıl Çalışıyoruz?</h2>
-            {renderDetails(card.detail)}
-          </div>
+          {/* Detaylar Bölümü */}
+         {/* Detaylar Bölümü */}
+         <div className="text-white text-xl mt-5">
+  <h2 className="bg-[#5c62f7] text-pretty rounded-md px-2 py-2 sm:px-1 sm:py-1 lg:px-8 lg:py-4 xl:px-10 xl:py-5 sm:m-5">
+    Nasıl Çalışıyoruz?
+  </h2>
+  <div className="p-7 mx-4 sm:mx-6 lg:mx-8 xl:mx-12">
+    {renderDetails(card.detail)}
+  </div>
+</div>
+
         </div>
       </div>
       <Footer />
