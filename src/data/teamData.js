@@ -14,7 +14,7 @@ const teamData = [
       name: "Burak Gökce ",
       position: "Kurucu ve CEO",
       area: "YB Digital’in genel stratejisini ve vizyonunu belirler. Şirketin büyüme hedeflerine ulaşması için liderlik yapar, projeleri yönetir ve ekip koordinasyonunu sağlar.  ",
-      photo: img5, // Profil fotoğrafı için örnek URL
+      photo: img5, 
    
     },
     {
@@ -22,15 +22,15 @@ const teamData = [
       name: "İlayda Serpil Girişken ",
       position: "CEO Asistanı  ",
       area: "CEO’nun günlük işlerini ve takvimini yönetir. Ekipler arasındaki iletişimi kolaylaştırır ve şirketin işleyişine yönelik destek sağlar. Operasyonel süreçlerde sorumluluk alır ve etkin bir koordinasyon sağlar. ",
-      photo: img1, // Profil fotoğrafı için örnek URL
+      photo: img1, 
       linkedin: "https://www.linkedin.com/in/ayşedemir",
     },
     {
       id: 3,
-      name: " Kübra Tankişi ",
+      name: "  Erenalp Yılmaz ",
       position: "Proje Lideri ve Kalite Güvence Lideri ",
       area: "Projelerin planlanmasını, koordinasyonunu ve yönetimini üstlenir. Kalite standartlarına uygunluk sağlamak için test ve kontrol süreçlerini yönetir. Proje ekiplerini yönlendirir ve iş akışlarını düzenler. ",
-      photo: img2, // Profil fotoğrafı için örnek URL
+      photo: img2, 
       linkedin: "https://www.linkedin.com/in/mehmetcan",
     },
     {
@@ -38,15 +38,15 @@ const teamData = [
       name: "Fatma Gençer",
       position: "Yapay Zeka Mühendisi",
       area: "Yapay zeka ve makine öğrenimi tabanlı çözümler geliştirir. Projelerde inovatif teknolojiler kullanarak iş süreçlerini güçlendirir. Yapay zeka algoritmalarıyla ilgili araştırma ve geliştirme faaliyetlerini yürütür. ",
-      photo: img3, // Profil fotoğrafı için örnek URL
+      photo: img3, 
       linkedin: "https://www.linkedin.com/in/aliyilmaz",
     },
     {
       id: 5,
-      name: "Erenalp Yılmaz",
+      name: "Kübra Tankişi",
       position: " İş Geliştirme ve İletişim Lideri ",
       area: "Şirketin iş geliştirme süreçlerini yönetir ve iletişim stratejilerini belirler. Müşteri ilişkilerini güçlendirir, yeni iş fırsatları yaratır ve ekip içi iletişimi geliştirir. ",
-      photo: img4, // Profil fotoğrafı için örnek URL
+      photo: img4, 
       linkedin: "https://www.linkedin.com/in/aliyilmaz",
     },
   ];

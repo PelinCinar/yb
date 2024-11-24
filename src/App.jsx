@@ -15,6 +15,7 @@ import OfferView from "./components/OfferContainer/OfferView";
 import Offer from "./pages/Offer/Offer";
 import BlogList from "./components/Blog/BlogList";
 import BlogDetail from "./components/Blog/BlogDetail";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 
 
@@ -22,17 +23,16 @@ const App = () => {
   return (
     <Provider store={store}>
       {" "}
-      {/* Store'u burada Provider ile sarın */}
       <BrowserRouter>
+ 
         <Navbar />
+        <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact/>} />
           <Route path="/blog" element={<BlogList/>} />
           <Route path="/blog/:id" element={<BlogDetail/>} />
-
-
 
           <Route path="/contact/view" element={<ContactView/>} />
           < Route path="/offer" element={<Offer/>}/>

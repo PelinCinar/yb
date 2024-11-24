@@ -1,5 +1,4 @@
 import { FaCode, FaPaintBrush, FaMobileAlt, FaChartLine } from "react-icons/fa";
-import yb from "../assets/yb.png";
 
 const cardData = [
   {
@@ -7,7 +6,7 @@ const cardData = [
     title: "Web Tasarımı Hizmetleri",
     description:
       "Modern ve kullanıcı dostu web tasarımıyla markanızı güçlendirin! ",
-    image: yb,
+    image: "https://i.pinimg.com/736x/cc/0f/b5/cc0fb524fbcdcd64a5645cb8e5f4d6e5.jpg",
     link: "yazilim-gelistirme",
     icon: FaCode, // Add icon reference here
     detail: `Kurumsal Web Siteleri: Profesyonel bir dijital kimlik.

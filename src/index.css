@@ -9,7 +9,7 @@ div.form-container {
 }
 
 
-@media (max-width: 200px) {
+@media (max-width: 200px) and (max-width: 932px) {
   .btn1-class {
     gap: 0.5rem;
   }
@@ -47,14 +47,14 @@ div.form-container {
  
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px)  {
   .contact-form {
     margin-top: 100px;
   }
   
 }
 
-@media (max-width: 780px) {
+@media (max-width: 780px) and (max-width: 932px) {
   .logo-container {
     margin-left: 1px !important;
     justify-content: flex-start;

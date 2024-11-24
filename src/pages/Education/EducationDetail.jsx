@@ -3,7 +3,6 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import educationData from "../../data/educationData";
 import Footer from "../Footer/Footer";
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa"; // Social media icons
 
 const EducationDetail = () => {
   const { id } = useParams();
@@ -16,13 +15,13 @@ const EducationDetail = () => {
   // Eğitmen hakkında bilgi render fonksiyonu
   const renderInstructorDetails = () => {
     return (
-      <div className="w-full lg:w-1/2 flex flex-col justify-center items-center p-24 mt-4 mb-4">
-        {/* Eğitmen Resmi (Square or Banner Style) */}
-        <div className="w-full h-72 bg-gray-300 mb-4 relative">
+      <div className="w-full lg:w-1/2 flex flex-col justify-center items-center p-12 mt-16">
+        {/* Eğitmen Resmi (Daha Küçük ve Responsive) */}
+        <div className="w-[400px] h-[300px] md:w-[450px] md:h-[350px] lg:w-[500px] lg:h-[400px] bg-[#5c62f7] mb-4 relative rounded-xl overflow-hidden ">
           <img
             src={education.instructor.image}
             alt={`${education.instructor.name} ${education.instructor.surname}`}
-            className="absolute inset-0 w-full h-full object-cover rounded-md"
+            className="absolute inset-0 w-full h-full object-cover rounded-tl-[50%] rounded-br-[50%]"
           />
         </div>
       </div>
@@ -32,14 +31,14 @@ const EducationDetail = () => {
   // Eğitim detaylarını render etme fonksiyonu
   const renderEducationDetails = () => {
     return (
-      <div className="w-full lg:w-1/2 bg-[#5c62f7] p-9 flex flex-col justify-center items-center">
+      <div className="w-full lg:w-1/2 bg-black p-9 flex flex-col justify-center items-center">
         {/* Eğitim Başlığı */}
-        <h1 className="text-4xl font-bold text-white mb-10 text-center  rounded-sm">
+        <h1 className="text-4xl font-bold text-white mb-10 text-center rounded-sm">
           {education.title}
         </h1>
         {/* Eğitim Detayları */}
         <div className="text-white text-2xl">
-          <h2 className="bg-black text-pretty rounded-md px-1 py-1 sm:px-1 sm:py-1 lg:px-1 lg:py-1 xl:px-1 xl:py-1 sm:m-1">
+          <h2 className="bg-[#5c62f7] text-pretty rounded-md px-1 py-1 sm:px-1 sm:py-1 lg:px-1 lg:py-1 xl:px-1 xl:py-1 sm:m-1">
             
           </h2>
           <p>{education.detail}</p>
@@ -51,7 +50,7 @@ const EducationDetail = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button className="bg-black text-white py-3 px-8 rounded-md hover:bg-[#0e0e0e78]  duration-300">
+            <button className="bg-[#5c62f7] text-white py-3 px-8 rounded-md hover:bg-[#0e0e0e78] duration-300">
               Detayları Görüntüle
             </button>
           </a>
