@@ -3,7 +3,7 @@ import { FaBrain, FaLaptopCode, FaUserGraduate, FaCode } from "react-icons/fa";
 import Edu1 from "../assets/Education/edu1.jpg"
 import Edu2 from "../assets/Education/edu2.jpg"
 import Edu3 from "../assets/Education/edu3.jpg"
-import Edu4 from "../assets/Education/edu4.jpg"
+import Edu4 from "../assets/Education/Edu4.jpg"
 import Edu5 from "../assets/Education/edu5.jpg"
 
 
